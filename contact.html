@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Atixa</title>
+  <meta name="description" content="Get in touch with the Atixa team. Report errors, suggest quiz categories, or just say hello. We read every message." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://atixa.app/contact.html" />
+  <meta property="og:title" content="Contact Atixa" />
+  <meta property="og:description" content="Get in touch with the Atixa team. We read every message." />
+  <meta property="og:url" content="https://atixa.app/contact.html" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ContactPage","name":"Contact Atixa","url":"https://atixa.app/contact.html","description":"Contact the Atixa team"}
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <nav class="nav" id="navbar">
+    <a class="nav__logo" href="index.html"><span class="logo-icon">◈</span> Atixa</a>
+    <div class="nav__links">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link active" href="contact.html">Contact</a>
+    </div>
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme"><span class="theme-toggle__icon">☀</span></button>
+      <a class="btn btn--primary" href="index.html">Start Quiz</a>
+    </div>
+    <button class="nav__hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="btn btn--ghost" href="index.html">Home</a>
+    <a class="btn btn--ghost" href="about.html">About</a>
+    <a class="btn btn--ghost" href="contact.html">Contact</a>
+    <a class="btn btn--primary" href="index.html">Start Quiz</a>
+  </div>
+
+  <main>
+    <div class="static-page static-page--wide">
+
+      <div class="ad-slot ad-slot--leaderboard" aria-label="Advertisement">Advertisement</div>
+
+      <header class="static-hero">
+        <p class="static-hero__eyebrow">Get in Touch</p>
+        <h1 class="static-hero__title">Contact Us</h1>
+        <p class="static-hero__sub">Found a wrong answer? Have a quiz idea? Want to partner with us? We read every single message and typically reply within 48 hours.</p>
+      </header>
+
+      <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <h2 style="font-family:'Syne',sans-serif;font-size:1.15rem;font-weight:700;color:var(--text-1);margin-bottom:1.5rem;">Send us a message</h2>
+          <div id="contactFormWrap">
+            <div class="form-group">
+              <label class="form-label" for="contactName">Your Name *</label>
+              <input class="form-input" type="text" id="contactName" name="name" placeholder="Jane Smith" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactEmail">Email Address *</label>
+              <input class="form-input" type="email" id="contactEmail" name="email" placeholder="jane@example.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactSubject">Subject *</label>
+              <select class="form-select" id="contactSubject" name="subject" required>
+                <option value="" disabled selected>Select a topic…</option>
+                <option value="wrong-answer">Report a wrong answer</option>
+                <option value="suggestion">Suggest a new category</option>
+                <option value="bug">Report a bug or issue</option>
+                <option value="partnership">Business or partnership enquiry</option>
+                <option value="privacy">Privacy or data request</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactMessage">Message *</label>
+              <textarea class="form-textarea" id="contactMessage" name="message" placeholder="Tell us what's on your mind…" required rows="5"></textarea>
+            </div>
+            <div class="form-group" style="flex-direction:row;align-items:flex-start;gap:0.6rem;">
+              <input type="checkbox" id="privacyConsent" style="margin-top:3px;accent-color:var(--primary);flex-shrink:0;" required />
+              <label for="privacyConsent" style="font-size:0.8rem;color:var(--text-2);line-height:1.5;">
+                I agree to the <a href="privacy.html" style="color:var(--primary);">Privacy Policy</a> and consent to Atixa storing my message to respond to my enquiry.
+              </label>
+            </div>
+            <button class="form-submit" type="button" id="contactSubmitBtn">Send Message →</button>
+          </div>
+          <div id="contactSuccess" style="display:none;text-align:center;padding:2rem;">
+            <div style="font-size:2.5rem;margin-bottom:1rem;">✅</div>
+            <h3 style="font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text-1);margin-bottom:0.5rem;">Message sent!</h3>
+            <p style="font-size:0.875rem;color:var(--text-2);">Thanks for reaching out. We typically respond within 48 hours.</p>
+          </div>
+        </div>
+
+        <!-- Info + FAQ -->
+        <div>
+          <div class="contact-info" style="margin-bottom:2rem;">
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon">📧</div>
+              <div>
+                <div class="contact-info-card__title">General Enquiries</div>
+                <div class="contact-info-card__body"><a href="mailto:hello@atixa.app" style="color:var(--primary);">hello@atixa.app</a><br/>We reply within 48 hours.</div>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon">🐛</div>
+              <div>
+                <div class="contact-info-card__title">Bug Reports &amp; Wrong Answers</div>
+                <div class="contact-info-card__body"><a href="mailto:bugs@atixa.app" style="color:var(--primary);">bugs@atixa.app</a><br/>Help us keep content accurate.</div>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon">🔒</div>
+              <div>
+                <div class="contact-info-card__title">Privacy &amp; Data Requests</div>
+                <div class="contact-info-card__body"><a href="mailto:privacy@atixa.app" style="color:var(--primary);">privacy@atixa.app</a><br/>GDPR requests handled within 30 days.</div>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="contact-info-card__icon">🤝</div>
+              <div>
+                <div class="contact-info-card__title">Partnerships &amp; Advertising</div>
+                <div class="contact-info-card__body"><a href="mailto:partners@atixa.app" style="color:var(--primary);">partners@atixa.app</a><br/>Business enquiries welcome.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ad slot sidebar -->
+          <div class="ad-slot ad-slot--rect" aria-label="Advertisement">Advertisement</div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <section style="margin-top:3rem;">
+        <div class="section-header" style="padding:0 0 1.5rem;text-align:left;">
+          <p class="section-header__eyebrow">FAQ</p>
+          <h2 class="section-header__title" style="font-size:1.6rem;">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list" id="faqList">
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">Is Atixa completely free to use? <span class="faq-item__icon">+</span></button>
+            <div class="faq-item__a" role="region">Yes, absolutely. All quizzes, categories, and features on Atixa are free with no registration, no paywalls, and no hidden fees. We are supported by non-intrusive display advertising.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">Do I need to create an account? <span class="faq-item__icon">+</span></button>
+            <div class="faq-item__a" role="region">No account is required. You can start any quiz in seconds directly from the homepage. We do not require any personal information to play.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">I found a wrong answer. How do I report it? <span class="faq-item__icon">+</span></button>
+            <div class="faq-item__a" role="region">Thank you for helping us improve! Please use the contact form above or email bugs@atixa.app with the question text, the answer you believe is incorrect, and the correct answer with a source if possible. We review all reports promptly.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">Can I suggest new quiz categories? <span class="faq-item__icon">+</span></button>
+            <div class="faq-item__a" role="region">Yes! We welcome category suggestions. Use the contact form and select "Suggest a new category." Popular requests get added to our roadmap. We're planning to add Geography, Film &amp; TV, Sport, and more.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">How is my data used? <span class="faq-item__icon">+</span></button>
+            <div class="faq-item__a" role="region">We collect only anonymous usage statistics (via Google Analytics) and any information you voluntarily provide through forms. We never sell personal data. Please read our full <a href="privacy.html">Privacy Policy</a> for complete details.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">Can I use Atixa on mobile? <span class="faq-item__icon">+</span></button>
+            <div class="faq-item__a" role="region">Yes! Atixa is fully responsive and mobile-first. It works beautifully on phones, tablets, and desktops. No app download is required — just open your browser and go.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-item__q" aria-expanded="false">Is Atixa suitable for classroom use? <span class="faq-item__icon">+</span></button>
+            <div class="faq-item__a" role="region">Yes, many educators use Atixa as a warm-up activity or review tool. Our content is reviewed for accuracy and designed to be engaging. Please note that our <a href="disclaimer.html">Disclaimer</a> states quiz content is for educational and entertainment purposes and should not replace formal instruction.</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="index.html"><span class="logo-icon">◈</span> Atixa</a>
+        <p class="site-footer__tagline">A free online quiz platform designed for curious minds.</p>
+        <div class="newsletter">
+          <div class="newsletter__title">Stay in the loop</div>
+          <div class="newsletter__sub">New quizzes and features, straight to your inbox.</div>
+          <div class="newsletter__form">
+            <input type="email" class="newsletter__input" placeholder="you@example.com" aria-label="Email" />
+            <button class="newsletter__btn" type="button">Subscribe</button>
+          </div>
+        </div>
+        <div class="social-links">
+          <a class="social-link" href="#" aria-label="Twitter">𝕏</a>
+          <a class="social-link" href="#" aria-label="Facebook">f</a>
+          <a class="social-link" href="#" aria-label="Instagram">◎</a>
+          <a class="social-link" href="#" aria-label="LinkedIn">in</a>
+          <a class="social-link" href="#" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div>
+        <div class="site-footer__col-title">Platform</div>
+        <ul class="site-footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="sitemap.html">Sitemap</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="site-footer__col-title">Quizzes</div>
+        <ul class="site-footer__links">
+          <li><a href="index.html">General Knowledge</a></li>
+          <li><a href="index.html">Science</a></li>
+          <li><a href="index.html">Technology</a></li>
+          <li><a href="index.html">History</a></li>
+          <li><a href="index.html">Mathematics</a></li>
+          <li><a href="index.html">English Vocab</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="site-footer__col-title">Legal</div>
+        <ul class="site-footer__links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="disclaimer.html">Disclaimer</a></li>
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copy">© 2026 Atixa. All rights reserved.</p>
+      <nav class="site-footer__legal">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="cookies.html">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-item__q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        document.querySelectorAll('.faq-item__q').forEach(b => b.setAttribute('aria-expanded','false'));
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded','true');
+        }
+      });
+    });
+
+    // Contact form demo submit
+    document.getElementById('contactSubmitBtn').addEventListener('click', () => {
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
+      const subject = document.getElementById('contactSubject').value;
+      const message = document.getElementById('contactMessage').value.trim();
+      const consent = document.getElementById('privacyConsent').checked;
+      if (!name || !email || !subject || !message || !consent) {
+        alert('Please fill in all required fields and accept the privacy policy.');
+        return;
+      }
+      document.getElementById('contactFormWrap').style.display = 'none';
+      document.getElementById('contactSuccess').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
