@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atixa — Test What You Know | Free Online Quiz Platform</title>
+  <meta name="description" content="Challenge yourself with Atixa's free online quizzes across General Knowledge, Science, Technology, History, Mathematics, and English. Instant feedback, beautiful design." />
+  <meta name="keywords" content="online quiz, free quiz, general knowledge, science quiz, trivia, educational quiz" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://atixa.app/" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Atixa — Test What You Know" />
+  <meta property="og:description" content="Free online quizzes across 6 categories. Sharp questions, instant feedback, beautiful design." />
+  <meta property="og:url" content="https://atixa.app/" />
+  <meta property="og:image" content="https://atixa.app/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Atixa — Test What You Know" />
+  <meta name="twitter:description" content="Free online quizzes across 6 categories." />
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite","name":"Atixa","url":"https://atixa.app","description":"Free online quiz platform with quizzes across General Knowledge, Science, Technology, History, Mathematics, and English Vocabulary.","potentialAction":{"@type":"SearchAction","target":"https://atixa.app/?q={search_term_string}","query-input":"required name=search_term_string"}}
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav" id="navbar">
+    <a class="nav__logo" href="index.html">
+      <span class="logo-icon">◈</span> Atixa
+    </a>
+    <div class="nav__links">
+      <a class="nav__link active" href="index.html">Home</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </div>
+    <div class="nav__actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="theme-toggle__icon">☀</span>
+      </button>
+      <button class="btn btn--ghost" onclick="showSection('categories')">Browse</button>
+      <button class="btn btn--primary" onclick="showSection('categories')">Start Quiz</button>
+    </div>
+    <button class="nav__hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a class="btn btn--ghost" href="index.html">Home</a>
+    <a class="btn btn--ghost" href="about.html">About</a>
+    <a class="btn btn--ghost" href="contact.html">Contact</a>
+    <button class="btn btn--primary" onclick="showSection('categories'); closeMobileMenu()">Start Quiz</button>
+  </div>
+
+  <!-- ══════════════════════════════════
+       HOME SECTION
+  ══════════════════════════════════ -->
+  <section class="section section--home active" id="section-home">
+
+    <!-- Hero -->
+    <div class="hero" id="home">
+      <div class="hero__bg">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <div class="orb orb--3"></div>
+        <div class="grid-lines"></div>
+      </div>
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="pulse-dot"></span> 12,400+ quizzes completed today
+        </div>
+        <h1 class="hero__headline">
+          Test What<br/>
+          <em>You Really</em><br/>
+          Know
+        </h1>
+        <p class="hero__sub">
+          Sharp questions. Instant feedback. Six categories designed to challenge curious minds — from casual learners to knowledge nerds.
+        </p>
+        <div class="hero__cta">
+          <button class="btn btn--hero" onclick="showSection('categories')">
+            Pick a Category
+            <span class="btn__arrow">→</span>
+          </button>
+          <span class="hero__cta-note">No signup needed</span>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="floating-card fc--1">
+          <span class="fc__emoji">🧬</span>
+          <span class="fc__label">Science</span>
+          <span class="fc__score">94%</span>
+        </div>
+        <div class="floating-card fc--2">
+          <span class="fc__emoji">🌍</span>
+          <span class="fc__label">History</span>
+          <span class="fc__score">78%</span>
+        </div>
+        <div class="floating-card fc--3">
+          <span class="fc__emoji">💡</span>
+          <span class="fc__label">General</span>
+          <span class="fc__score">89%</span>
+        </div>
+        <div class="hero__ring">
+          <div class="ring ring--outer"></div>
+          <div class="ring ring--inner"></div>
+          <div class="ring__center">◈</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="stats__item">
+        <span class="stats__num" data-target="48200">0</span>
+        <span class="stats__label">Quizzes Completed</span>
+      </div>
+      <div class="stats__divider"></div>
+      <div class="stats__item">
+        <span class="stats__num" data-target="8700">0</span>
+        <span class="stats__label">Active Learners</span>
+      </div>
+      <div class="stats__divider"></div>
+      <div class="stats__item">
+        <span class="stats__num" data-target="6">0</span>
+        <span class="stats__label">Categories</span>
+      </div>
+      <div class="stats__divider"></div>
+      <div class="stats__item">
+        <span class="stats__num" data-target="180">0</span>
+        <span class="stats__label">Questions</span>
+      </div>
+    </div>
+
+    <!-- Categories preview -->
+    <div class="home-cats">
+      <div class="section-header">
+        <p class="section-header__eyebrow">Six Domains</p>
+        <h2 class="section-header__title">Choose Your Arena</h2>
+      </div>
+      <div class="cat-grid" id="homeCatGrid">
+        <!-- injected by JS -->
+      </div>
+      <div class="home-cats__cta">
+        <button class="btn btn--outline" onclick="showSection('categories')">View All Categories →</button>
+      </div>
+    </div>
+
+    <!-- How it works -->
+    <div class="how">
+      <div class="section-header">
+        <p class="section-header__eyebrow">Simple Process</p>
+        <h2 class="section-header__title">How It Works</h2>
+      </div>
+      <div class="how__steps">
+        <div class="how__step">
+          <div class="how__step-num">01</div>
+          <h3>Pick a category</h3>
+          <p>Choose from six domains — science, tech, history, and more.</p>
+        </div>
+        <div class="how__step-arrow">→</div>
+        <div class="how__step">
+          <div class="how__step-num">02</div>
+          <h3>Answer 10 questions</h3>
+          <p>Each question is timed. Select your answer and get instant feedback.</p>
+        </div>
+        <div class="how__step-arrow">→</div>
+        <div class="how__step">
+          <div class="how__step-num">03</div>
+          <h3>See your score</h3>
+          <p>Detailed results break down what you got right, wrong, and why.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ad slot — leaderboard before footer -->
+    <div class="ad-slot ad-slot--leaderboard" aria-label="Advertisement">Advertisement</div>
+
+    <!-- Mega Footer -->
+    <footer class="site-footer">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <a class="site-footer__logo" href="index.html"><span class="logo-icon">◈</span> Atixa</a>
+          <p class="site-footer__tagline">A free online quiz platform designed for curious minds. Challenge yourself across six knowledge domains with instant feedback and beautiful design.</p>
+          <div class="newsletter">
+            <div class="newsletter__title">Stay in the loop</div>
+            <div class="newsletter__sub">New quizzes and features, straight to your inbox.</div>
+            <div class="newsletter__form">
+              <input type="email" class="newsletter__input" placeholder="you@example.com" aria-label="Email address" />
+              <button class="newsletter__btn" type="button">Subscribe</button>
+            </div>
+          </div>
+          <div class="social-links">
+            <a class="social-link" href="#" aria-label="Twitter / X">𝕏</a>
+            <a class="social-link" href="#" aria-label="Facebook">f</a>
+            <a class="social-link" href="#" aria-label="Instagram">◎</a>
+            <a class="social-link" href="#" aria-label="LinkedIn">in</a>
+            <a class="social-link" href="#" aria-label="YouTube">▶</a>
+          </div>
+        </div>
+        <div>
+          <div class="site-footer__col-title">Platform</div>
+          <ul class="site-footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html" onclick="event.preventDefault();showSection('categories')">Browse Quizzes</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="site-footer__col-title">Categories</div>
+          <ul class="site-footer__links">
+            <li><a href="index.html" onclick="event.preventDefault();startQuiz('general')">General Knowledge</a></li>
+            <li><a href="index.html" onclick="event.preventDefault();startQuiz('science')">Science</a></li>
+            <li><a href="index.html" onclick="event.preventDefault();startQuiz('technology')">Technology</a></li>
+            <li><a href="index.html" onclick="event.preventDefault();startQuiz('history')">History</a></li>
+            <li><a href="index.html" onclick="event.preventDefault();startQuiz('mathematics')">Mathematics</a></li>
+            <li><a href="index.html" onclick="event.preventDefault();startQuiz('english')">English Vocab</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="site-footer__col-title">Legal</div>
+          <ul class="site-footer__links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">© 2026 Atixa. All rights reserved. Built for curious minds.</p>
+        <nav class="site-footer__legal" aria-label="Legal links">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="disclaimer.html">Disclaimer</a>
+          <a href="cookies.html">Cookies</a>
+        </nav>
+      </div>
+    </footer>
+
+  </section>
+
+  <!-- ══════════════════════════════════
+       CATEGORIES SECTION
+  ══════════════════════════════════ -->
+  <section class="section" id="section-categories">
+    <div class="page-header">
+      <button class="btn btn--back" onclick="showSection('home')">← Back</button>
+      <div>
+        <h1 class="page-header__title">Choose Your Category</h1>
+        <p class="page-header__sub">30 questions per category, 20 seconds each</p>
+      </div>
+    </div>
+    <div class="cat-grid cat-grid--full" id="fullCatGrid">
+      <!-- injected by JS -->
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       QUIZ SECTION
+  ══════════════════════════════════ -->
+  <section class="section" id="section-quiz">
+    <div class="quiz-wrap">
+
+      <!-- Quiz Header -->
+      <div class="quiz-header">
+        <button class="btn btn--back btn--sm" onclick="confirmExit()">✕ Exit</button>
+        <div class="quiz-meta">
+          <span class="quiz-cat-badge" id="quizCatBadge"></span>
+          <span class="quiz-counter" id="questionCounter">Question 1 of 10</span>
+        </div>
+        <div class="quiz-timer" id="quizTimer">
+          <span class="timer-icon">⏱</span>
+          <span id="timerDisplay">20</span>
+        </div>
+      </div>
+
+      <!-- Progress bar -->
+      <div class="progress-bar-wrap">
+        <div class="progress-bar" id="progressBar" style="width:0%"></div>
+        <div class="progress-glow" id="progressGlow" style="width:0%"></div>
+      </div>
+
+      <!-- Question card -->
+      <div class="question-card" id="questionCard">
+        <p class="question-num" id="questionNum">01</p>
+        <h2 class="question-text" id="questionText">Loading question…</h2>
+        <div class="options-grid" id="optionsGrid">
+          <!-- injected by JS -->
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="quiz-nav">
+        <button class="btn btn--nav" id="prevBtn" onclick="prevQuestion()" disabled>← Prev</button>
+        <div class="quiz-dots" id="quizDots"></div>
+        <button class="btn btn--nav btn--nav-next" id="nextBtn" onclick="nextQuestion()">Next →</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════
+       RESULTS SECTION
+  ══════════════════════════════════ -->
+  <section class="section" id="section-results">
+    <div class="results-wrap">
+
+      <div class="results-top">
+        <div class="results-score-ring">
+          <svg class="score-svg" viewBox="0 0 120 120">
+            <circle class="score-track" cx="60" cy="60" r="52"/>
+            <circle class="score-fill" id="scoreFill" cx="60" cy="60" r="52"
+              stroke-dasharray="327" stroke-dashoffset="327"/>
+          </svg>
+          <div class="results-score-inner">
+            <span class="results-pct" id="resultsPct">0%</span>
+            <span class="results-label">score</span>
+          </div>
+        </div>
+
+        <div class="results-summary">
+          <div class="results-message" id="resultsMessage">Loading…</div>
+          <div class="results-stats">
+            <div class="results-stat results-stat--correct">
+              <span class="results-stat__num" id="correctCount">0</span>
+              <span class="results-stat__label">Correct</span>
+            </div>
+            <div class="results-stat results-stat--wrong">
+              <span class="results-stat__num" id="wrongCount">0</span>
+              <span class="results-stat__label">Wrong</span>
+            </div>
+            <div class="results-stat results-stat--time">
+              <span class="results-stat__num" id="avgTime">0s</span>
+              <span class="results-stat__label">Avg. Time</span>
+            </div>
+          </div>
+          <div class="results-actions">
+            <button class="btn btn--primary" id="restartBtn" onclick="restartQuiz()">Try Again</button>
+            <button class="btn btn--outline" onclick="showSection('categories')">New Category</button>
+            <button class="btn btn--ghost" onclick="shareResults()">Share →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Answer review -->
+      <div class="review-section">
+        <h3 class="review-title">Answer Review</h3>
+        <div class="review-list" id="reviewList">
+          <!-- injected by JS -->
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── OVERLAYS ── -->
+  <div class="overlay" id="exitOverlay">
+    <div class="overlay__card">
+      <h3>Leave this quiz?</h3>
+      <p>Your progress will be lost.</p>
+      <div class="overlay__actions">
+        <button class="btn btn--outline" onclick="closeOverlay()">Keep Going</button>
+        <button class="btn btn--danger" onclick="exitQuiz()">Exit Quiz</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Burst particles container -->
+  <div id="burstContainer" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
